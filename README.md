@@ -1,1 +1,1 @@
-# JavaScriptCampCodes
+JavaScript Camp codes.
