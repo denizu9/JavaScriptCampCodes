@@ -1,19 +1,25 @@
-console.log("Merhaba")
+console.log("Hello World")
 
-let dolarYesterday = 20
-let dolarToday = 20.1
+let dolarYesterday = 26.00
 
-console.log(dolarYesterday)
+let dolarToday = 26.08
 
-const euroYesterday = 22.11 // constant variable, because keyword, data type  is const
 
-let houseCredits = ["Konut Kredisi", "Emlak Konut Kredisi", "Kamu Kanut Kredisi"]
+// const -> sabit
+const euroYesterday = 28.30
+
+
+let credits = ["Konut Kredisi", "Emlak Kredisi", "Kamu Konut Kredisi"]
+
+console.log(credits)
 
 console.log("<ul>")
-for(let index = 0; index < houseCredits.length; index++){
-    console.log("<li>" + houseCredits[index] + "</li>")
+for (let credit = 0; credit < credits.length; credit++) {
+    
+    console.log(" <li>" + credits[credit] + "</li>")
 }
-
 console.log("</ul>")
+
+
 
 
