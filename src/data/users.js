@@ -1,26 +1,26 @@
 export const users = [
     {
         id:1,
-        firstName:"Deniz",
-        lastName:"Ural",
+        firstName:"Joey",
+        lastName:"Tribbiani",
         city:"İstanbul",
-        age:25,
+        age:34,
         creditCardNumber:"1234567",
         type:"customer"
     },
     {
         id:2,
-        firstName:"İrem",
-        lastName:"Ural",
-        city:"Giresun",
-        age:24,
+        firstName:"Chandler M",
+        lastName:"Bing",
+        city:"Ipsarta",
+        age:30,
         creditCardNumber:"987654",
         type:"customer"
     },
     {
         id:3,
-        firstName:"Mehmet",
-        lastName:"Esgin",
+        firstName:"Rachel",
+        lastName:"Green",
         city:"Ankara",
         age:49,
         salary:89500,
@@ -28,17 +28,17 @@ export const users = [
     },
     {
         id:4,
-        firstName:"Harun",
-        lastName:"Dinç",
+        firstName:"Ross",
+        lastName:"Geller",
         city:"Yalova",
-        age:25,
+        age:29,
         salary:8500,
         type:"employee"
     },
     {
         id:5,
-        firstName:"Furkan",
-        lastName:"Nehir",
+        firstName:"Monica",
+        lastName:"Geller",
         city:"Bilecik",
         age:25,
         salary:12500,
