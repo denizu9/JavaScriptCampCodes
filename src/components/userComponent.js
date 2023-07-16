@@ -7,8 +7,8 @@ console.log("User component loaded!")
 let logger1 = new MongoLogger()
 let userService = new UserService(logger1)
 
-let user1 = new User(1,"Deniz", "Ural", "İstanbul",25)
-let user2 = new User(2,"İrem", "Kadıoğlu","Giresun",24)
+let user1 = new User(1,"Ahmet", "Emin", "İstanbul",38)
+let user2 = new User(2,"Ayşe", "Doğru","Bursa",74)
 
 userService.add(user1)
 userService.add(user2)
