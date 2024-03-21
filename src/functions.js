@@ -1,92 +1,25 @@
-function addToCartComputer(quantity, productName = "Computer") {
-    console.log("Added to Cart : " + productName + " quantity of product : " + quantity)
+function addToCart(quantity ,productName = "Apple MacBook Air") {
+    console.log("Sepete Eklendi, ürün : " + productName + " " + "Adet  : " + quantity)
 }
 
-addToCartComputer(2, "Acer Nitro AN45-50")
+addToCart()
+
+addToCart("Acer Nitro 5 AN515-45", 1);
+
+addToCart("Apple MacBook Pro 2024 14", 3)
+
+addToCart(10)
 
 
-// Arrow Function
-
-let sayHello = () => {
-    console.log("Arrow Function says Helloooo")
+let sayHello = () =>{
+    console.log("Hello")
 }
 
 sayHello()
 
 
-// Define object and send it to addToCart Method
-
-let product1 = {productName : "Armut", quantity : 5, unitPrice : 18.90}
-
-function addToCart(product){
-    console.log("Added to Cart : " + product.productName + " Quantity : " + product.quantity + "Unit Price : " + product.unitPrice)
+let sayHello2 = function (params){
+    console.log("Hello 2")
 }
 
-addToCart(product1)
-
-
-function addToCart2(products){
-    console.log(products)
-}
-
-let products = [
-    {productName : "Armut", quantity : 5, unitPrice : 18.90},
-    {productName : "Elma", quantity : 4, unitPrice : 15},
-    {productName : "Karpuz", quantity : 1, unitPrice : 56.90}
-]
-
-addToCart2(products)
-
-
-console.log("****************** REST Usage *****************")
-
-//REST
-function addNumbers(...numbers){ //Rest
-    
-    let sum = 0
-    for (let number = 0; number < numbers.length; number++) {
-        sum += numbers[number]
-    }
-    console.log(sum)
-}
-
-addNumbers(20,30)
-
-
-console.log("****************** SPREAD USAGE *******************")
-
-let numbers = [30,100,30,56,230,678,345,123]
-
-console.log(...numbers) // In here we use (...) for spread the numbers in Array and this is called SPREAD
-console.log(Math.max(...numbers))
-
-
-let [icAnadolu, marmara, karadeniz, [icAnadoluSehirleri, marmaraSehirleri, karadenizSehirleri]] = [
-    {name:"İç Anadolu", population:"20M"},
-    {name:"Marmara", population:"30M"},
-    {name:"Karadeniz", population:"10M"},
-    [
-        ["Ankara","Konya"],
-        ["İstanbul","Bursa"],
-        ["Giresun","Sinop"],
-    ]
-]
-
-console.log(icAnadolu)
-console.log(icAnadolu.name)
-console.log(icAnadolu.population)
-
-console.log(icAnadoluSehirleri)
-console.log(marmaraSehirleri)
-console.log(karadenizSehirleri)
-
-
-let newProductName, newUnitPrice, newQuantity
-({productName:newProductName, unitPrice:newUnitPrice, quantity:newQuantity} 
-    = {productName:"Armut",unitPrice:5,quantity:1})
-
-console.log(newProductName)
-console.log(newQuantity)
-console.log(newUnitPrice)
-
-
+sayHello2()

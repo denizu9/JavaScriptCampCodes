@@ -1,0 +1,43 @@
+1) npm install
+
+2) component mimarisi, single page application.
+
+3) ecma script -> geliştirilmiş javascript denebilir.
+
+	Transpiler ile yazdığımız kod javascript'e çevrilir.
+
+4) saf javascript'te, variable tanımlarken "var" keyword'ü kullanılır.
+	
+	Ancak var kullanmıyoruz, "let" keyword'ünü kullanıyoruz.
+	
+	var kullanıldığı zaman scope olayı yok oluyor. 
+	
+	Mesela global bir değişkenin var, ve altta if bloğu var mesela. Eğer var kullanırsan
+	globalde olan değişken de değişiyor ve patlıyoruz.
+	
+5) javascript type safe değildir. Yani bir değişken tanımladık, int türünde daha sonra
+aynı değişkeni string bir değerde tekrardan tanımlayabiliriz.
+
+6) const -> constant, const olarak bir değişkene, bir değer atayınca buna başka bir şey
+atayamazsın. Read Only olarak geçer.
+
+Extensions :
+
+Auto Rename Tag ( Jun Han) -> Tag'leri automatic bir şekilde doldurur.
+
+Bracket Pair Colorizer 2 -> CoenraadS -> Renkli parantezler
+
+Dracula Official -> Dracula theme
+
+EditorConfig for VS Code -> EditorConfig
+
+ES7 React/Redux -> dsznajder 
+
+Material Icon Theme -> Iconları getirir.
+
+
+1. Ders sadece app.js dosyasını kullandık farklı bir şey eklemedik.
+
+
+
+	

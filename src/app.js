@@ -1,25 +1,20 @@
-console.log("Hello World")
+console.log("I'm starting to learn Javascript")
 
-let dolarYesterday = 26.00
+let dolarPriceYesterday = 32.02;
+let dolarPriceToday = 32.15;
 
-let dolarToday = 26.08
+console.log(dolarPriceYesterday)
+
+const euroPriceYesterday = 35;
+
+console.log(euroPriceYesterday)
 
 
-// const -> sabit
-const euroYesterday = 28.30
-
-
-let credits = ["Konut Kredisi", "Emlak Kredisi", "Kamu Konut Kredisi"]
-
-console.log(credits)
+let houseCredits = ["Mutlu Yaşlı Kredisi", "Huzurevi Kredisi", "Çiftçi Konut Kredisi"]
 
 console.log("<ul>")
-for (let credit = 0; credit < credits.length; credit++) {
-    
-    console.log(" <li>" + credits[credit] + "</li>")
+for (let credit = 0; credit < houseCredits.length; credit++) {
+    console.log("<li>" + houseCredits[credit] + "</li>")
 }
+
 console.log("</ul>")
-
-
-
-

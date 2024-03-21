@@ -1,0 +1,76 @@
+
+** addToCart() fonksiyonu, argüman olarak "productName" almasına rağmen, fonksiyonu çağırırken
+parametre vermesekte kod çalışır. 
+
+	Ancak, undefined olarak geçer. Yani bellekte bir şey oluşmaz. O yüzden 
+	undefined(tanımlı olmayan) şeklinde gözükür.
+	
+	Java da veya C#'da kod compile bile olmaz çünkü dilin kuralına aykırıdır. Ancak JS'de bu 
+	durum farklı
+	
+	Bunun sebebi JS'nin type safe bir dil olmamasıdır. Eğer type script kullansaydık, bunun
+	önüne geçebilirdik.
+	
+** JS'de, argüman olarak, default değer ataması yapılabilir. Mesela,
+	
+	function addToCart(productName = "Apple Macbook Air").
+	
+	Eğer addToCart fonksiyonunu parametresiz olarak çağırırsam, default olarak, 
+	Apple Macbook Air'ı kabul edecek ve Console'da
+	
+	Sepete Eklendi : Apple Macbook Air olarak göreceğiz.
+	
+	Mesela, function addToCart(productName = "Elma", quantity) diye tanımladık fonksiyonu.
+	
+	Şimdi burada çağıralım,
+	
+	addToCart(), parametresiz çağırdım. Normalde 2 lazım, vermedim.
+	
+	Sonuç :
+	
+		Sepete Eklendi, ürün : Elma Adet : undefined.
+		
+		Default olarak tanımladığım productName geldi, ancak quantity de var ama default değeri
+		yok. Bundan dolayı undefined oldu.
+		
+	
+	ÖNEMLİ : 
+	
+		JS'de parametreler sıralı ilerler. Yani addToCart(10) dersek.
+		
+		Ürün : 10, Adet : Undefined olur
+		
+		Bunu önlemek için :
+		
+			İlk önce quantity'i yaz, sonra default değeri yaz.
+			
+			function addToCart(quantity, productName = "Apple Macbook Air") gibi.
+
+
+*** arrow kullanımı : (Variable'a fonksiyon tanımlama)
+
+	
+	Biz bir variable tanımlayıp, bu variable'a değer olarak bir fonksiyon tanımlayabiliriz.
+	
+	let sayHello = () => {
+		console.log("Hello")
+	}
+	
+		sayHello bir variable. Ama biz bu variable'ı sanki fonksiyon çağırdığımız gibi,
+		çağırabiliriz. 
+		
+		sayHello()
+		
+			Çağırdığımız zaman ortaya çıkan sonuç :
+		
+				"Hello"
+				
+	
+	Aynı şekilde bir variable'a normal bir fonksiyon tanımlayabiliriz.
+	
+	Normal function ile arrow function kullanımın yeri React'ta önemlidir.
+	
+	(Kullanımı araştır!!)
+	
+	
+	
