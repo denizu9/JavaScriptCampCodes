@@ -73,4 +73,123 @@ parametre vermesekte kod çalışır.
 	(Kullanımı araştır!!)
 	
 	
+** JS'de obje tanımı : (Class gibi düşünebiliriz) :
+
+	let product1 = {productName : "Elma", quantity : 5, unitPrice 10}
+
+		Bu şekilde tanımlanabilir.
+		
+		
+
+** Çoklu parametre Gönderimi : REST and SPREAD
+
+	function add(...numbers){
+		console.log(numbers)
+	}
+		
+	fonksiyonu çağıralım :
+	
+	add(20, 30)
+	
+	Burada gönderilen 20 ve 30'u ...numbers Array şeklinde tutar :
+	
+			(2) [20, 30] bu şekilde.
+			
+	** Buna yani bir fonksiyonun içine ... yazılmasına "REST" operatörü denir.
+	
+	REST'te dikkat edilmesi gereken şey;
+	
+	her zaman en sona yaz!
+	
+	Mesela, argüman olarak iki tane olsun;
+	
+	function add(product, ...numbers) her zaman bu şekilde, rest sonda olmalı.
+	
+	Sebebi şu;
+			
+			REST operatörü zaten gönderilen sayının veya herhangi bir şeyin sayısının belirli
+			olmadığı durumlarda kullanılır. O yüzden eğer başta yazılırsa, geriye kalan 
+			parametreleri de almaya çalışacaktır. Bu yüzden sona yazılmalıdır.
+			
+	
+	Eğer elimizde toplu bir veri var ve ayrıştırmak istiyorsak :
+	
+	"SPREAD" kullanırız.
+	
+	Örnek kullanım :
+	
+	let numbers = [30,789,422,31,2,78] olsun.
+	
+	console.log(Math.max(...numbers))  dediğimiz zaman, aslında REST kullanımı gibi yapılıyor.
+	
+	Ancak bu sefer ayrıştırma anlamına geliyor. Ve sanki bu sayılar kendi başlarına 
+	değişkenlermiş gibi ele alıp, en büyük değeri Math.max ile buluyor.
+	
+	Buna da "SPREAD" denir.
+	
+	"REST" -> Toplar
+	
+	"SPREAD" -> Ayrıştırır.
+	
+
+
+** Destructuring:
+
+	Destructuring dediğimiz şey, elimizde olan bir verinin, alt dallara bölünmesi gibi 
+	düşünebiliriz. Örnek olarak;
+	
+	
+	let [akdeniz, marmara] = [
+    {name : "Akdeniz", population : "10M"},
+    {name : "Marmara", population : "35M"},
+    {name : "Karadeniz", population : "8M"}
+] 
+
+console.log(akdeniz.name)
+console.log(akdeniz.population)
+
+
+	Mesela burada bir array tanımladık ve içine akdeniz ve marmara adında değişkenler koyduk.
+	Ardından akdeniz ve marmarayı alt dallarına ayırdık. Böylelikle akdeniz ve marmaranın
+	alt dallara ayrılmış özelliklerini destructuring ile kullanabilmiş olduk.
+	
+	Temel kullanım amacı; api'lerden gelen bilgileri hızlıca parçalamaktır.
+	
+	
+	Birde arrayin içinde de destructuring yapabiliriz. Örnek olarak;
+	
+	let [akdeniz, marmara, karadeniz, [akdenizSehirleri]] = [
+    {name : "Akdeniz", population : "10M"},
+    {name : "Marmara", population : "35M"},
+    {name : "Karadeniz", population : "8M"},
+    [
+        ["Antalya","Alanya"],
+        ["İstanbul","Bursa"],
+        ["Giresun","Samsun"]
+
+    ]
+] 
+
+console.log(akdeniz.name)
+console.log(akdeniz.population)
+console.log(akdenizSehirleri)
+
+
+	Burada dikkat edilmesi gereken nokta;
+	
+	akdenizSehirleri
+	
+	Bu konu react'ta hayat kurtarırmış dikkat et!!
+	
+	
+	Destructuring'i objeler ile kullanırken dikkat et.
+	
+	{ ( ) }, Süslü parantez içine mutlaka normal parantezde koy.
+
+	Çünkü JavaScript {} bunu bir kod bloğu olarak görüyor. Biz de burada () koyarak
+	
+	bunun bir kod bloğu olmadığını söylemiş oluyoruz.
+
+	
+	
 	
