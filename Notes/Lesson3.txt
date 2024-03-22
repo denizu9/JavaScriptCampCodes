@@ -118,7 +118,7 @@
 		
 		constructor mantığı : (Yapıcı Blok -> java ve diğer her yerde aynı mantık)
 		
-		Şimdi burada argüman verelim constructor'a. :
+		Şimdi burada parametre verelim constructor'a. :
 		
 		constructor(id, firstName, lastName, city){
 			this.id = id
@@ -128,7 +128,7 @@
 				
 			Burada this ile belirttiğimiz sol taraf, yani this keyword'ü, User'ı işaret ediyor.
 			
-			Yani türkçesi; User'ın firstName'i, constructor'ın argümanı olan firstName'dir.
+			Yani türkçesi; User'ın firstName'i, constructor'ın parametresi olan firstName'dir.
 			diyoruz.
 			
 			İşte bu "this" prototyping oluyor.

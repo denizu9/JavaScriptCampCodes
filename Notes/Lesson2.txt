@@ -1,6 +1,6 @@
 
-** addToCart() fonksiyonu, argüman olarak "productName" almasına rağmen, fonksiyonu çağırırken
-parametre vermesekte kod çalışır. 
+** addToCart() fonksiyonu, parametre olarak "productName" almasına rağmen, fonksiyonu çağırırken
+argüman vermesekte kod çalışır. 
 
 	Ancak, undefined olarak geçer. Yani bellekte bir şey oluşmaz. O yüzden 
 	undefined(tanımlı olmayan) şeklinde gözükür.
@@ -15,7 +15,7 @@ parametre vermesekte kod çalışır.
 	
 	function addToCart(productName = "Apple Macbook Air").
 	
-	Eğer addToCart fonksiyonunu parametresiz olarak çağırırsam, default olarak, 
+	Eğer addToCart fonksiyonunu argümansız olarak çağırırsam, default olarak, 
 	Apple Macbook Air'ı kabul edecek ve Console'da
 	
 	Sepete Eklendi : Apple Macbook Air olarak göreceğiz.
@@ -24,7 +24,7 @@ parametre vermesekte kod çalışır.
 	
 	Şimdi burada çağıralım,
 	
-	addToCart(), parametresiz çağırdım. Normalde 2 lazım, vermedim.
+	addToCart(), argümansız çağırdım. Normalde 2 lazım, vermedim.
 	
 	Sonuç :
 	
@@ -36,7 +36,7 @@ parametre vermesekte kod çalışır.
 	
 	ÖNEMLİ : 
 	
-		JS'de parametreler sıralı ilerler. Yani addToCart(10) dersek.
+		JS'de argümanlar sıralı ilerler. Yani addToCart(10) dersek.
 		
 		Ürün : 10, Adet : Undefined olur
 		
@@ -81,7 +81,7 @@ parametre vermesekte kod çalışır.
 		
 		
 
-** Çoklu parametre Gönderimi : REST and SPREAD
+** Çoklu argüman Gönderimi : REST and SPREAD
 
 	function add(...numbers){
 		console.log(numbers)
@@ -109,7 +109,7 @@ parametre vermesekte kod çalışır.
 			
 			REST operatörü zaten gönderilen sayının veya herhangi bir şeyin sayısının belirli
 			olmadığı durumlarda kullanılır. O yüzden eğer başta yazılırsa, geriye kalan 
-			parametreleri de almaya çalışacaktır. Bu yüzden sona yazılmalıdır.
+			argümanları da almaya çalışacaktır. Bu yüzden sona yazılmalıdır.
 			
 	
 	Eğer elimizde toplu bir veri var ve ayrıştırmak istiyorsak :
