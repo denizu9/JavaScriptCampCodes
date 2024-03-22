@@ -1,0 +1,140 @@
+
+** SOLID principles var. OOP concept
+
+** SPA -> Single Page Application -> React, Angular.
+
+	React ve Angular, tek bir sayfadan oluşuyor, bu yüzden bir data'yı değiştirdiğimiz 
+	zaman, bu datanın değiştiğine dair react'ı haberdar etmemiz gerekiyor.
+	Bundan dolayı "STATE MANAGEMENT" önemli.
+	
+	
+** map - filter - reduce,
+	
+	Iterate edilebilen fonskiyonlarda, yani bir dönüş gerçekleştirebildiğimiz fonks.'larda
+	kullanabiliriz.
+	
+	
+	** map() :
+
+		Elimizde bulunan Array'i vs. tek tek dolaşmaya yarar. Java'da olduğu gibi.
+		Yani bildiğimiz map'leme. 
+		
+		Hem iterate ediyor, hem de yeni bir array veriyor.(Tabi istersek)
+		
+		cart.map(product => console.log(product.productName))
+		
+		product -> aynı for'da falan olduğu gibi, takma ad. i gibi.
+		
+		Sepeti dolaş ve sırayla productName'leri yazdır.
+		
+	
+	** filter() :
+	
+		Bir arama yaparken veya filtrelerken kullanılır.
+		
+		let quantityOver2 = cart.filter(product => product.quantity >= 2)
+
+		console.log(quantityOver2)
+		
+		Elimizde bulunan product'ların quantity'sinin 2'den büyük olanlarını quantityOver2 
+		variable'ına atar. Bu bir arraydir ve array'i yazdırır.
+	
+	
+	** reduce() :
+			
+		let total = cart.reduce((acc, product) => acc + (product.unitPrice * product.quantity), 0)
+
+		console.log(total)
+		
+		88030Tl
+		
+		acc -> accumulator = Bildiğin for'daki int i = 0 gibi. Başlangıç değeri.
+		
+		product -> bildiğimiz alyas.
+		
+		Sondaki 0'da acc'ın başlangıç değeri.
+		
+
+** OOP Concept :
+
+	class yaratmak için; 
+	
+	export default class UserService{} şeklinde yazarız.
+	
+		Export -> Dışarıdan erişilebilir(import) anlamına gelir.
+		
+		default -> Eğer UserService'i import edersek farklı bir yerde, otomatik olarak
+		bu class'ı import et anlamına gelir.
+		
+		Bu JavaScript'in file based (dosya bazlı) olmasından kaynaklanır.
+		
+		
+	Burada class mantığı, ilgili fonksiyonları gruplamak için kullanılır.
+	
+	Normal bir JavaScript geliştiricisi, her şeyi fonskiyonlarda tutabilir. Yani class kullanmaz.
+	
+	
+	** src/component/userComponent.js :
+	
+		Burada component'i ekran olarak düşünebiliriz. Yani User'ın ekranı tarzında.
+		
+	
+	Bir class'ı farklı bir classta veya bir yerde kullanmak için, new'leriz. Yani;
+	
+	let userService = new UserService()
+	
+	bu şekilde. Bildiğin java mantığı.
+	
+	** src/models/user.js
+	
+		Bildiğimiz class, aynı bizim java'daki Customer, Barber gibi.
+		
+		klasör adı da dbModels gibi düşün, burada da models dedik.
+		
+		model açıklaması : Kullanıcaya gösterdiğimiz veya kullanıcıdan alıp api'ye gönderdiğimiz
+		veri tiplerine verdiğimiz genel bir isim.
+		
+		** Prototyping :
+		
+			Bir obje düşünelim, customer olsun.
+			
+			let customer = {id : 1, customerName : "Deniz"} şeklinde.
+			
+			şimdi ben şunu yaparsam, customerLastName = "Ural"
+			
+			ve console.log(customerLastName) dersem,
+			
+			normal şartlarda olmaması lazım ancak console'a "Ural" yazar. İşte bunu sağlayan 
+			
+			şey prototyping'dir.
+			
+			Aşağıda constructor alanında tam olarak örneği vereceğim.
+			
+			
+		Saf JavaScript'te bir class yarattığımız zaman, java'da olduğu gibi attribute'ları,
+		string customerName şeklinde veremiyoruz.
+		
+		Bunu constructor ile yapabiliyoruz.
+		
+		constructor mantığı : (Yapıcı Blok -> java ve diğer her yerde aynı mantık)
+		
+		Şimdi burada argüman verelim constructor'a. :
+		
+		constructor(id, firstName, lastName, city){
+			this.id = id
+			this.firstName = firstName
+			this.lastName = lastName
+		}
+				
+			Burada this ile belirttiğimiz sol taraf, yani this keyword'ü, User'ı işaret ediyor.
+			
+			Yani türkçesi; User'ın firstName'i, constructor'ın argümanı olan firstName'dir.
+			diyoruz.
+			
+			İşte bu "this" prototyping oluyor.
+			
+	** src/crossCuttingConcerns 
+	
+		Bu klasör loglama gibi, doğrulama, cache gibi işlemlerin tutulduğu klasördür.
+				
+			
